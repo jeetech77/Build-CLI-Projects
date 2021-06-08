@@ -6,6 +6,7 @@ const personOne={
 const personTwo={
     name:"Krishna",
     age:28,
+    yuga:"Dwapar"
 }
 function maxAge(objOne,objTwo){
     if (objOne.age>objTwo.age) {
