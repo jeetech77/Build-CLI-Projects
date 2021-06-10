@@ -10,7 +10,6 @@ for (let index = 0; index < numOfStudents; index++) {
     studentsmarks[index] = parseInt(readlineSync.question(`Enter the unit test marks of the ${index + 1} student...\n`));
     studentsmarks[index + 1] = parseInt(readlineSync.question(`Enter the pre final marks of the ${index + 1} student...\n`));
     studentsmarks[index + 2] = parseInt(readlineSync.question(`Enter the final of the ${index + 1} student...\n`));
-    console.log(typeof (studentsmarks));
     studentsDB.totalMark[index] = parseInt(studentsmarks[index] + studentsmarks[index + 1] + studentsmarks[index + 2]);
 };
 console.table(studentsDB);
