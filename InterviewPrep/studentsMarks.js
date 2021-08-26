@@ -6,11 +6,11 @@ var studentsDB = {
 let numOfStudents = 5;
 for (let index = 0; index < numOfStudents; index++) {
     studentsDB.name[index] = readlineSync.question(`Enter the name of ${index + 1} student...\n`);
-    let studentsmarks = [];
-    studentsmarks[index] = parseInt(readlineSync.question(`Enter the unit test marks of the ${index + 1} student...\n`));
-    studentsmarks[index + 1] = parseInt(readlineSync.question(`Enter the pre final marks of the ${index + 1} student...\n`));
-    studentsmarks[index + 2] = parseInt(readlineSync.question(`Enter the final of the ${index + 1} student...\n`));
-    studentsDB.totalMark[index] = parseInt(studentsmarks[index] + studentsmarks[index + 1] + studentsmarks[index + 2]);
+     let unitMark = readlineSync.questionInt(`Enter ${studentsDB.name[index]} unit mark : \n`);
+     let preFinalMark = readlineSync.questionInt(`Enter ${studentsDB.name[index]} Pre final mark : \n`);
+     let finalMark = readlineSync.questionInt(`Enter ${studentsDB.name[index]} Final mark : \n`);
+     studentsDB.totalMark[index] = unitMark + preFinalMark + finalMark;
+   
 };
 console.table(studentsDB);
 let allStudentsMark = 0;
