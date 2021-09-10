@@ -3,12 +3,12 @@ const readlineSync = require('readline-sync');
 let numOfRows = readlineSync.questionInt("Enter the number of rows to be printed...\n");
 let patternStyle = readlineSync.keyInYN("Do you want to print in inverted format...?");
 if (patternStyle) {
-    console.log("Normal Format\n");
-    normalPatter();
-}
-else {
     console.log("Inverted Format \n");
     invertedPatter();
+}
+else {
+    console.log("Normal Format\n");
+    normalPatter();
 }
 
 function normalPatter() {
